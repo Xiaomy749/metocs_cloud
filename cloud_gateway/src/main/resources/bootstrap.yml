@@ -1,0 +1,30 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.31.95:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: client-user
+        uri: lb://user
+        predicates:
+          - Path=/user/** # 路由映射路径 这里注意，这个路径会追加到 service_id后
+      - id: client-security
+        uri: lb://security
+        predicates:
+          - Path=/security/**
+      - id: client-main
+        uri: lb://main
+        predicates:
+          - Path=/main/**
+      - id: client-video
+        uri: lb://video
+        predicates:
+          - Path=/video/**

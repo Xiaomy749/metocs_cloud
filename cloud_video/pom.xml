@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>cloud_parent</artifactId>
+        <groupId>com.metocs</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../cloud_parent/pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>cloud_video</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>cloud_video</name>
+
+    <properties>
+        <java.version>11</java.version>
+    </properties>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>com.metocs</groupId>
+            <artifactId>cloud_common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

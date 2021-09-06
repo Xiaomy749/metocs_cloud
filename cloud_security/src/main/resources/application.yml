@@ -1,0 +1,58 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: security
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.31.95:8848
+    loadbalancer:
+      ribbon:
+        enabled: false
+  jackson:
+    default-property-inclusion: non_null
+    serialization:
+      write-dates-as-timestamps: true
+  # redis 配置
+  redis:
+    database: 0
+    host: 192.168.31.95
+    password: s164857362
+    port: 6379
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+    timeout: 100ms
+
+  datasource:
+      username: root
+      password: 3333
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://192.168.31.95:3306/main?serverTimezone=GMT%2B8
+      type: com.alibaba.druid.pool.DruidDataSource
+      druid:
+        initialSize: 15
+        minIdle: 10
+        maxActive: 20
+        maxWait: 60000
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        maxEvictableIdleTimeMillis: 900000
+
+logging:
+  level:
+    com.metocs.security.mapper: trace
+
+
+management:
+  endpoint:
+    health:
+      enabled: true
+
+mybatis-plus:
+  global-config:
+    db-config:
+      column-underline: true
