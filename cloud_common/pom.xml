@@ -5,10 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>cloud_parent</artifactId>
+        <artifactId>metocs_cloud</artifactId>
         <groupId>com.metocs</groupId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../cloud_parent/pom.xml</relativePath>
     </parent>
 
     <artifactId>cloud_common</artifactId>
