@@ -14,6 +14,11 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <dependencies>
+        <dependency>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+            <version>2.3.0</version>
+        </dependency>
         <!--            spring boot 包            -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
