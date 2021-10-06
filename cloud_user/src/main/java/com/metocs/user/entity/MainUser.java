@@ -13,7 +13,7 @@ public class MainUser  {
 
 
     @TableId(value = "id",type = IdType.ASSIGN_ID)
-    private Long id;
+    private String id;
     /**
      * 用户名
      */
@@ -26,6 +26,10 @@ public class MainUser  {
      * 用户昵称
      */
     private String nickName;
+    /**
+     * 生日
+     */
+    private String birthday;
     /**
      * 用户电话
      */

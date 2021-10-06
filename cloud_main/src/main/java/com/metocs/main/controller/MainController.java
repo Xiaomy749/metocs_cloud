@@ -28,7 +28,7 @@ public class MainController extends BaseController {
 
 
     @GetMapping(value = "/getList")
-    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
+    //@PreAuthorize("hasAnyRole('ROLE_ADMIN')")
     public Result getALllDataBaseName(@RequestParam(value = "name",required = false)String name,
                                       @RequestParam(value = "pageSize")Integer pageSize,
                                       @RequestParam(value = "pageNum")Integer pageNum){
@@ -42,7 +42,7 @@ public class MainController extends BaseController {
     }
 
     @PostMapping(value = "/save")
-    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
+    //@PreAuthorize("hasAnyRole('ROLE_ADMIN')")
     public Result save(@RequestBody DatabaseName databaseName){
         databaseNameService.save(databaseName);
         return success();
@@ -50,14 +50,14 @@ public class MainController extends BaseController {
 
 
     @PostMapping(value = "/update")
-    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
+    //@PreAuthorize("hasAnyRole('ROLE_ADMIN')")
     public Result update(@RequestBody DatabaseName databaseName){
         databaseNameService.updateById(databaseName);
         return success();
     }
 
     @DeleteMapping(value = "/delete/{id}")
-    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
+    //@PreAuthorize("hasAnyRole('ROLE_ADMIN')")
     public Result delete(@PathVariable(value = "id") Long id){
         databaseNameService.removeById(id);
         return success();
